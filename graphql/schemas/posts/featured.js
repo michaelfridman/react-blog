@@ -1,6 +1,6 @@
-import moment from 'moment'
+const moment  = require('moment');
 
-export default [
+module.exports = [
     {
         title: 'Can anyone code?',
         date: moment().format('MMMM DD, YYYY'),
@@ -23,7 +23,7 @@ export default [
         image: 'programming_languages.jpeg'
     },
     {
-        title: 'Bob Hacks for Learning to Program',
+        title: 'Brain Hacks for Learning to Program',
         date: moment().format('MMMM DD, YYYY'),
         categories: ['Brain Health'],
         link: '#',

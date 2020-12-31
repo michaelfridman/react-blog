@@ -1,6 +1,6 @@
-const db = require('../../database/mysql')
-const {errorHandler} = require('../utils')
-const intersection = require('lodash/intersection')
+const db = require('../../database/mysql');
+const {errorHandler} = require('../utils');
+const intersection = require('lodash/intersection');
 
 module.exports = {
     getPost: async (id) => 
@@ -15,7 +15,9 @@ module.exports = {
     createPost: async (args) => 
         await db.insert(args.data)
             .then(res => {
-                return res?.[0] || 0
+//               Unexpected token .
+//                 return res?.[0] || 0
+                return res[0] || 0
             }),
 
     getPosts: (type, category_ids) => {
